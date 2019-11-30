@@ -32,6 +32,9 @@ mtrl_main <- function(file=system.file('extdata/tpl.xlsx',package = 'kdcmtrlpkg'
   data1 <-data1[ ,colnames(h2)];
   res <- rbind(h2,data1);
   res <-df_as_character(res);
+  #修正一下导入表名称
+  #to do
+  names(res) <- metaInfo$all$FDBName;
   return(res);
 
 
